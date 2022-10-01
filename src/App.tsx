@@ -1,10 +1,15 @@
 import React from 'react';
+import { useState } from 'react';
 import { CompoundButton, Text, FontWeights, IStackTokens, ITextStyles } from '@fluentui/react';
 import * as FluentUIReact from '@fluentui/react';
 import { QueryTab } from './components/QueryTab';
+import './App.css';
+import { LibraryDisplay, BooksListProps, Book } from './components/LibraryDisplay';
 
 const boldStyle: Partial<ITextStyles> = { root: { fontWeight: FontWeights.semibold, fontSize: 50} };
-const stackTokens: IStackTokens = { childrenGap: 100, padding: 0  };
+const stackTokens: IStackTokens = { childrenGap: 60};
+const buttonsStackTokens: IStackTokens = { childrenGap: 60};
+const headerStackTokens: IStackTokens = { childrenGap: -45};
 
 const {
   createTheme,
@@ -39,22 +44,76 @@ const myTheme = createTheme({
     white: '#2b2933',
   }});
 
+  
 export const App: React.FunctionComponent = () => {
+  const [onAddNew, setOnAddNew] = useState(false);
+  const [onDisplayList, setOnDisplayList] = useState(false);
+  const [onSearch, setOnSearch] = useState(false);
+  
+  function onAddNewClicked() : void {
+    setOnAddNew(true);
+    setOnDisplayList(false);
+    setOnSearch(false);
+  }
+
+  function onDisplayClicked() : void {
+    setOnAddNew(false);
+    setOnDisplayList(true);
+    setOnSearch(false);
+  }
+
+  function onSearchClicked() : void {
+    setOnAddNew(false);
+    setOnDisplayList(false);
+    setOnSearch(true);
+  }
+  const bookList : Book[] = [
+    {
+        "bookTittle" : "Harry Potter",
+        "author" : "J. K. Rowling",
+        "ISBN": 12345,
+        "hardCover" : true
+    },
+    {
+        "bookTittle" : "Wonder",
+        "author" : "R. J. Palacio",
+        "ISBN": 15462354,
+        "hardCover" : true
+    },
+    {
+        "bookTittle" : "Factfulness",
+        "author" : "Hans Rossling",
+        "ISBN": 987654321,
+        "hardCover" : false
+    },
+  ];
+
   return (
     <ThemeProvider applyTo='body' theme={myTheme}>
       <Stack className='container' horizontalAlign="center" verticalAlign="center" verticalFill tokens={stackTokens}>
-        <Stack className='header'>
-          <Text variant="mega" styles={boldStyle}>Personal Library</Text>
-          <Text className="quote" variant="large">"A reader lives a thousand lives before he dies"</Text>
+        <Stack className='container_header' verticalFill tokens={headerStackTokens} >
+          <h1>Personal Library</h1>
+          <Text className="container_quote" variant="large">"A reader lives a thousand lives before he dies"</Text>
         </Stack>
-        <Stack className="buttonStack" horizontal tokens={stackTokens} horizontalAlign="center">
-          <QueryTab showHardCopy="yes" queryTittle='Add new book' secondaryText="Add your new favorite book" actionButton='Add Book'/>
-          <CompoundButton className='NavButton' primary secondaryText="See what in your library" disabled={false} checked={false}>
+        <Stack className="container_buttonStack" horizontal tokens={buttonsStackTokens} horizontalAlign="center">
+          <CompoundButton primary secondaryText="Add your new favorite book" disabled={false} checked={onAddNew} onClick={onAddNewClicked}>
+          Add new book
+          </CompoundButton>
+          <CompoundButton primary secondaryText="See what's in your library" disabled={false} checked={onDisplayList} onClick={onDisplayClicked}>
             Your List
           </CompoundButton>
-          <QueryTab showHardCopy="no" queryTittle='Search a book' secondaryText='Search for a book' actionButton='Search'/>
+          <CompoundButton primary secondaryText="Look up a book, author" disabled={false} checked={onSearch} onClick={onSearchClicked}>
+            Search a book
+          </CompoundButton>
         </Stack>
+        <div>
+          {onAddNew ? (<QueryTab showHardCopy="yes" secondaryText='Add a book' actionButton='Add'/>):<div/>}
+          {onSearch ? (<QueryTab showHardCopy="no" secondaryText='Search for a book' actionButton='Search'/>) : <div/>}
+          {onDisplayList ? (<LibraryDisplay />) : <div/>}
+        </div>
+        
       </Stack>
+      
     </ThemeProvider>
   );
 };

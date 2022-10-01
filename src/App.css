@@ -2,32 +2,20 @@
   text-align: center;
 }
 
-.queryTab-tabTitle {
-  box-sizing: border-box;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: baseline;
-  padding: 1em;
-  margin-bottom: 2em;
-  background-color: rgb(192, 45, 26);
-  color: #fff;
-}
-
-.App Header {
+.container_header {
   text-align: center;
   font-size: xx-large;
-  background-color: blueviolet;
+  width:2000px;
 }
 
-.buttonStack {
-  box-sizing: border-box;
-  padding: 1em;
+.container_buttonStack {
   margin-bottom: 2em;
-  background-color: rgb(192, 45, 26);
 }
 
-.App-quote{
-  margin: 10px;
-  font-size: 50px;
+.container_quote{
+  font-size: 25px;
 }
+
+
+
+

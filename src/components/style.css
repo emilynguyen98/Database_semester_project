@@ -1,0 +1,12 @@
+.queryTab_input {
+    justify-content: center;
+    width: 250px;
+    display: flexbox;
+
+}
+
+.displayScreen{
+    display: flex;
+    width: 1000px;
+    color:antiquewhite; 
+}

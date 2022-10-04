@@ -90,8 +90,8 @@ export const App: React.FunctionComponent = () => {
   return (
     <ThemeProvider applyTo='body' theme={myTheme}>
       <Stack className='container' horizontalAlign="center" verticalAlign="center" verticalFill tokens={stackTokens}>
-        <Stack className='container_header' verticalFill tokens={headerStackTokens} >
-          <h1>Personal Library</h1>
+        <Stack className='container_header' horizontalAlign="center" verticalAlign="center" verticalFill tokens={headerStackTokens} >
+          <h1 className=''>Personal Library</h1>
           <Text className="container_quote" variant="large">"A reader lives a thousand lives before he dies"</Text>
         </Stack>
         <Stack className="container_buttonStack" horizontal tokens={buttonsStackTokens} horizontalAlign="center">

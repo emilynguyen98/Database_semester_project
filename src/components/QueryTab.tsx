@@ -2,7 +2,6 @@ import { Stack, IStackTokens  } from '@fluentui/react';
 import { TextField } from '@fluentui/react/lib/TextField';
 import { PrimaryButton } from '@fluentui/react/lib/Button';
 import * as React from 'react';
-
 import './style.css';
 
 export interface QueryTabProps {
@@ -10,8 +9,6 @@ export interface QueryTabProps {
     actionButton: string
     showHardCopy: string
 }
-
-
 const stackTokens: IStackTokens = { childrenGap: 10  };
 
 export class QueryTab extends React.Component<{

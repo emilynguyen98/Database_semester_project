@@ -9,7 +9,6 @@ export interface QueryTabProps {
     actionButton: string
     showHardCopy: string
 }
-
 const stackTokens: IStackTokens = { childrenGap: 10  };
 
 export class QueryTab extends React.Component<{
@@ -22,7 +21,7 @@ export class QueryTab extends React.Component<{
         }
 
         return (
-            <div className="queryTab" >
+            <div className="queryTab" style={stackTokens}>
                 <Stack className="queryTab_inputLists" horizontalAlign="center" verticalAlign="center" verticalFill tokens={stackTokens} >
                     <TextField className="queryTab_input" label="Book Tittle" placeholder="Harry Potter" />
                     <TextField className="queryTab_input" label="Author" placeholder="J. K. Rowling" />
@@ -35,7 +34,6 @@ export class QueryTab extends React.Component<{
                     }
                     <PrimaryButton text={this.props.actionButton} onClick={_alertClicked} allowDisabledFocus disabled={false} checked={false} />
                 </Stack> 
-                
             </div>
         );
     }

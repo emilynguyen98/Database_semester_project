@@ -1,8 +1,74 @@
-# Personal Library Web Application
+<div align="center">
+  <a href=" ">
+    <img
+      src="https://upload.wikimedia.org/wikipedia/commons/3/3a/Book-icon-bible.png"
+      alt="OUR VIRTUAL LIBRARY"
+      height="80"
+    />
+  </a>
+  <br />
+  <p>
+    <h3>
+      <b>
+        <OUR VIRTUAL LIBRARY>
+      </b>
+    </h3>
+  </p>
+  <p>
+    <b>
+      Our personal Library Project, efficent, quick and reliable source to trust when it comes to storing books. 
+    </b>
+  </p>
+  <p>
+     <a href=" ">
+     <img
+         "
+      />
+      </a>
+      <a href=" ">
+       
+     
+  </p>
+  <p>
+    <sub>
+      Built by ❤︎ Our Team (Pierce,Riley,Emily,Thomas)
+                             
+## OUR VIDEO WALKTHROUGH:
+-----------------------------------
+       
+ <!--------------------------------------------SCREENSHOT ------------------------>
+   
+                 
+                 
+                 
 
-This is a [Create React App](https://github.com/facebook/create-react-app) based repo that comes with Fluent UI pre-installed!
-This application helps user stores a record of the books they have read in a library fashion. User can create an account, add, delete or search for a book, see their entire library in just a few simpple clicks. 
-The application was build using React, Nodejs, Typescript with the support of FluentUI- a Microsoft pre-built component library for front-end, and the database using MySQL. 
+            
+https://user-images.githubusercontent.com/73293720/194685123-9a1a9e9f-eaaf-4538-813b-b535545c0902.mp4
+
+
+          
+                 
+ <!--------------------------------------------SCREENSHOT ------------------------>
+
+## 🔮 Overview
+Our project is meant to replicate a A phyisical Library. This workspace on Github is built using a version controller called Git. This project is meant to facilitate the access of Books in a personal Library that is specific to the readers/users needs. Some People might like to read more of Historical books e.g: The Silk Roads, and others like to read fantasy books e.g: A Game of thrones... 
+
+We can see that by creating a personal library stored on our mySQL server it can keep track of every book the users read.
+
+Our Goal by building this project is to:
+-   Data exploration & transformation
+-   Full-Stack development 
+-   UI design exploration
+-   Industry grade Technology Stack
+-   Showcase our project 
+
+🚀 **Requests:** WE are Currently still in Development Phase. Our Goal is to have the project completed and Fully Functional towards the end of the semester,our main communication channel is on Slack.
+
+
+
+**How to build:**
+-------------------
+# Getting Started with Create React App and Fluent UI
 
 ## Available Scripts
 

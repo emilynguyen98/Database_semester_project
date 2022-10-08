@@ -70,11 +70,9 @@ Our Goal by building this project is to:
 -------------------
 # Getting Started with Create React App and Fluent UI
 
-This is a [Create React App](https://github.com/facebook/create-react-app) based repo that comes with Fluent UI pre-installed!
-
 ## Available Scripts
 
-In the project directory, you can run:
+In the project directory, to see the official front-end code, you can run:
 
 ### `npm start`
 

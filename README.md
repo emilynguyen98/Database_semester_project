@@ -31,22 +31,17 @@
   </p>
   <p>
     <sub>
-      Built by ❤︎ Our Team <Pierce,RIley,Emily,Thomas>
+      Built by ❤︎ Our Team <Pierce,Riley,Emily,Thomas>
        
-    </sub>
+ <!--------------------------------------------SCREENSHOT ------------------------>
   </p>
-  
-  <a href="https://www.cnext.io" target="_blank">
-      <img
-      
-        
+      <img  src="![Screen Shot 2022-09-28 at 4 55 26 PM](https://user-images.githubusercontent.com/73293720/194684616-28c0e6a6-b930-4702-b4dc-3859f566473d.png)      
  "
         alt="Image"
         width="80%"
       />
 </div>
-
-
+ <!--------------------------------------------SCREENSHOT ------------------------>
 
 ## 🔮 Overview
 Our project is meant to replicate a A phyisical Library. This workspace on Github is built using a version controller called Git. This project is meant to facilitate the access of Books in a personal Library that is specific to the readers/users needs. Some People might like to read more of Historical books e.g: The Silk Roads, and others like to read fantasy books e.g: A Game of thrones... 

@@ -31,16 +31,23 @@
   </p>
   <p>
     <sub>
-      Built by ❤︎ Our Team <Pierce,Riley,Emily,Thomas>
+      Built by ❤︎ Our Team (Pierce,Riley,Emily,Thomas)
+                             
+## OUR VIDEO WALKTHROUGH:
+-----------------------------------
        
  <!--------------------------------------------SCREENSHOT ------------------------>
-  </p>
-      <img  src="![Screen Shot 2022-09-28 at 4 55 26 PM](https://user-images.githubusercontent.com/73293720/194684616-28c0e6a6-b930-4702-b4dc-3859f566473d.png)      
- "
-        alt="Image"
-        width="80%"
-      />
-</div>
+   
+                 
+                 
+                 
+
+            
+https://user-images.githubusercontent.com/73293720/194685123-9a1a9e9f-eaaf-4538-813b-b535545c0902.mp4
+
+
+          
+                 
  <!--------------------------------------------SCREENSHOT ------------------------>
 
 ## 🔮 Overview

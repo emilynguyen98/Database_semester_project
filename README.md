@@ -1,6 +1,8 @@
 # Personal Library Web Application
 
 This is a [Create React App](https://github.com/facebook/create-react-app) based repo that comes with Fluent UI pre-installed!
+This application helps user stores a record of the books they have read in a library fashion. User can create an account, add, delete or search for a book, see their entire library in just a few simpple clicks. 
+The application was build using React, Nodejs, Typescript with the support of FluentUI- a Microsoft pre-built component library for front-end, and the database using MySQL. 
 
 ## Available Scripts
 

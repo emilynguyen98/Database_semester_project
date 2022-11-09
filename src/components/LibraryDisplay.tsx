@@ -1,49 +1,13 @@
-/* import { Stack, IStackTokens  } from '@fluentui/react';
-import { TextField } from '@fluentui/react/lib/TextField';
-import { PrimaryButton } from '@fluentui/react/lib/Button';
-import * as React from 'react';
-import './style.css';
-
-const stackTokens: IStackTokens = { childrenGap: 10  };
-
-export class QueryTab extends React.Component<{
-    secondaryText: string
-    actionButton: string
-    showHardCopy: string}, QueryTabProps> {
-    public render() {
-        function _alertClicked(): void {
-            alert('Clicked');
-        }
-
-        return (
-            <div className="queryTab" >
-                <Stack className="queryTab_inputLists" horizontalAlign="center" verticalAlign="center" verticalFill tokens={stackTokens} >
-                    <TextField className="queryTab_input" label="Book Tittle" placeholder="Harry Potter" />
-                    <TextField className="queryTab_input" label="Author" placeholder="J. K. Rowling" />
-                    <TextField className="queryTab_input" label="ISBN" placeholder="9780747532743" />
-                    {this.props.showHardCopy === "yes" ? (
-                    <div className='form-control'>
-                        <label>Hard copy</label>
-                        <input type="checkbox" ></input>    
-                    </div>) : <div/>
-                    }
-                    <PrimaryButton text={this.props.actionButton} onClick={_alertClicked} allowDisabledFocus disabled={false} checked={false} />
-                </Stack> 
-                
-            </div>
-        );
-    }
-}; */
 import * as React from 'react';
 import './style.css';
 
 import { DetailsList, buildColumns, IColumn } from '@fluentui/react/lib/DetailsList';
 
 export interface Book {
-    bookTittle: string;
-    author: string;
+    Tittle: string;
+    Author: string;
     ISBN: number;
-    hardCover: boolean
+    Digital: boolean
 }
 export interface BooksListProps {
     sortedItems: Book[];
@@ -51,24 +15,24 @@ export interface BooksListProps {
 }
 
 export class LibraryDisplay extends React.Component<{}, BooksListProps> {
-    items: Book [] = [
+    items: Book[] = [
         {
-            "bookTittle" : "Harry Potter",
-            "author" : "J. K. Rowling",
+            "Tittle" : "Harry Potter",
+            "Author" : "J. K. Rowling",
             "ISBN": 12345,
-            "hardCover" : true
+            "Digital" : true
         },
         {
-            "bookTittle" : "Wonder",
-            "author" : "R. J. Palacio",
+            "Tittle" : "Wonder",
+            "Author" : "R. J. Palacio",
             "ISBN": 15462354,
-            "hardCover" : true
+            "Digital" : true
         },
         {
-            "bookTittle" : "Factfulness",
-            "author" : "Hans Rossling",
+            "Tittle" : "Factfulness",
+            "Author" : "Hans Rossling",
             "ISBN": 987654321,
-            "hardCover" : false
+            "Digital" : false
         },
     ];
   constructor(props: {}) {

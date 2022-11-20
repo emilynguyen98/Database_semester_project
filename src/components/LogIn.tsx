@@ -1,11 +1,14 @@
 import { Stack, TextField, CompoundButton, IStackTokens, Text, PrimaryButton } from '@fluentui/react'
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const stackTokens: IStackTokens = { childrenGap: 60};
 const buttonsStackTokens: IStackTokens = { childrenGap: 60};
 const headerStackTokens: IStackTokens = { childrenGap: 15};
 
 const LogIn = () => {
+
+    const navigate = useNavigate();
     const [onLogIn, setOnLogIn] = useState(true);
     const [onSignUp, setOnSignUp] = useState(false);
 
@@ -23,9 +26,14 @@ const LogIn = () => {
       setOnSignUp(true);
     }
   
-    function funHolder ():void {
-        alert('Clicked')
+    function onLogInSubmit():void {
+      // do verification 
+        navigate('/home'); 
     }
+
+    function onSignUpSubmit():void {
+      navigate('/home'); 
+  }
 
   return (
     <Stack className='container' horizontalAlign="center" verticalAlign="center" verticalFill tokens={stackTokens}>
@@ -46,14 +54,14 @@ const LogIn = () => {
             (   <Stack className="inputLists" horizontalAlign="center" verticalAlign="center" verticalFill tokens={headerStackTokens} >
                     <TextField className="input" label="Email" placeholder="abc@gmail.com" onChange={(e) => setEmail(e.currentTarget.value)}/>
                     <TextField className="input" label="Password" placeholder="abc123" onChange={(e) => setPassword(e.currentTarget.value)}/>
-                    <PrimaryButton text={'Log In'} onClick={funHolder} allowDisabledFocus disabled={false} checked={false} />
+                    <PrimaryButton text={'Log In'} onClick={onLogInSubmit} allowDisabledFocus disabled={false} checked={false} />
                 </Stack> )
             : 
             (   <Stack className="inputLists" horizontalAlign="center" verticalAlign="center" verticalFill tokens={headerStackTokens} >
                     <TextField className="input" label="Name" placeholder="J. K. Rowling" onChange={(e) => setName(e.currentTarget.value)}/>
                     <TextField className="input" label="Email" placeholder="abc@gmail.com" onChange={(e) => setEmail(e.currentTarget.value)}/>
                     <TextField className="input" label="Password" placeholder="abc123" onChange={(e) => setPassword(e.currentTarget.value)}/>
-                    <PrimaryButton text={'Sign Up'} onClick={funHolder} allowDisabledFocus disabled={false} checked={false} />
+                    <PrimaryButton text={'Sign Up'} onClick={onSignUpSubmit} allowDisabledFocus disabled={false} checked={false} />
                 </Stack> )
             }
         </div>        

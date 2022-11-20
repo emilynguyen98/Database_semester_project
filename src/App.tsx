@@ -2,8 +2,10 @@ import React from 'react';
 import { useState } from 'react';
 import { CompoundButton, Text, FontWeights, IStackTokens, ITextStyles } from '@fluentui/react';
 import * as FluentUIReact from '@fluentui/react';
-import  HomePage  from './components/HomePage'
+import  HomePage  from './components/HomePage';
 import './App.css';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import LogIn from './components/LogIn';
 
 
 const boldStyle: Partial<ITextStyles> = { root: { fontWeight: FontWeights.semibold, fontSize: 50} };
@@ -44,8 +46,14 @@ const myTheme = createTheme({
   
 export const App: React.FunctionComponent = () => {
   return (
+    <BrowserRouter>
     <ThemeProvider applyTo='body' theme={myTheme}>
-        <HomePage></HomePage>
+        <Routes>
+            <Route path='/' element={<LogIn/>} />
+            <Route path='/home' element={<HomePage/>} />
+        </Routes>
     </ThemeProvider>
+    </BrowserRouter>
+    
   );
 };

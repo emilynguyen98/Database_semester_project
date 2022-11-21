@@ -34,13 +34,12 @@ app.post('/createBook', (req, res) => {
 });
 
 app.post('/createUser', (req, res) => {
-    const name = req.body.name;
     const email = req.body.email;
     const password = req.body.password;
 
     db.query(
-        "INSERT INTO users (password, email, name) VALUES(?,?,?)",
-        [password, email, name], 
+        "INSERT INTO users (password, email) VALUES(?,?)",
+        [password, email], 
         (err, result)=>{
             if(err){
                 console.log(err);
@@ -65,13 +64,49 @@ app.get('/findUser', (req, res) => {
 
 app.get('/getBooks', (req, res) => {
     const userID = req.query.userID;
-    db.query("SELECT name FROM books WHERE userID = ?", userID,(err, result)=>{
+    db.query("SELECT * FROM books WHERE userID = ?", userID,(err, result)=>{
         if(err){
             console.log(err);
         } else {
             res.send(result);
         }
     });
+});
+
+app.get('/getBooksTitle', (req, res) => {
+    const userID = req.query.userID;
+    const title= req.query.title;
+    db.query("SELECT * FROM books WHERE userID = ? AND name=?", [userID, title],(err, result)=>{
+        if(err){
+            console.log(err);
+        } else {
+            res.send(result);
+        }
+    });
+});
+
+app.get('/getBooksAuthor', (req, res) => {
+    const userID = req.query.userID;
+    const author = req.query.author;
+    db.query("SELECT * FROM books WHERE userID = ? AND author=?", [userID, author],(err, result)=>{
+        if(err){
+            console.log(err);
+        } else {
+            res.send(result);
+        }
+    });
+});
+
+app.delete('/delete/:bookNo',(req,res)=>{
+    const bookID = req.params.bookNo;
+    db.query("DELETE FROM books WHERE bookNo=?", bookID, (err,result)=>{
+    if(err) {
+        console.log(err);
+        }
+    else{
+        res.send(result);
+        } 
+    }) 
 });
 
 app.listen(3001, ()=>{

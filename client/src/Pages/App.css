@@ -7,6 +7,65 @@
   padding: 10px;
 }
 
+.addBook{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding-top: 10%;
+}
+
+body{
+  background-color: antiquewhite;
+}
+
+.Login{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding-top: 10%;
+}
+
+.Login button{
+  width: 40%;
+}
+.signupUser{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 5%;
+  width: 25%;
+}
+
+.loginUser{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 5%;
+  width: 25%;
+}
+
+.buttonSelection{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.buttonSelection button{
+  margin:10px;
+}
+
+.selectionHeader{
+  width: 100%;
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+
+}
 .book p{
   margin: 10px;
 }

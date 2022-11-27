@@ -32,7 +32,7 @@ function AddBook(props) {
   if(selection.current!==0){
     return (
       <div className='App'>
-        <div className='information'>
+        <div className='addBook'>
           <label>Book Name:</label>
           <input type="text" id="inputName" onChange={(event)=>{setName(event.target.value)}}/>
           <label>Author:</label>

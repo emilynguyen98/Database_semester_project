@@ -69,24 +69,20 @@ function Login() {
     if(userID.current===0){
       return(
         <div className='Login'>
-          <div>
-            <div className='signupUser'>
-                  <label>Email:</label>
-                  <input type="text" onChange={(event)=>{setEmail(event.target.value)}}/>
-                  <label>Password:</label>
-                  <input type="text" onChange={(event)=>{setPassword(event.target.value)}}/>
-                  <button onClick={addProtocol}>Sign Up</button>
-              </div>
-            </div>
-            <div>
-              <div className='loginUser'>
-                  <label>Email:</label>
-                  <input type="text" onChange={(event)=>{setEmail(event.target.value)}}/>
-                  <label>Password:</label>
-                  <input type="text" onChange={(event)=>{setPassword(event.target.value)}}/>
-                  <button onClick={loginProtocol}>Login</button>
-              </div>
-            </div>
+          <div className='signupUser'>
+              <label>Email:</label>
+              <input type="text" onChange={(event)=>{setEmail(event.target.value)}}/>
+              <label>Password:</label>
+              <input type="text" onChange={(event)=>{setPassword(event.target.value)}}/>
+              <button onClick={addProtocol}>Sign Up</button>
+          </div>
+          <div className='loginUser'>
+            <label>Email:</label>
+            <input type="text" onChange={(event)=>{setEmail(event.target.value)}}/>
+            <label>Password:</label>
+            <input type="text" onChange={(event)=>{setPassword(event.target.value)}}/>
+            <button onClick={loginProtocol}>Login</button>
+          </div>
         </div>
       );
     }else{

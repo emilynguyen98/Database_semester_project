@@ -9,7 +9,6 @@ import './App.css';
 function Selection(props){
     const userID=props.login;
     const selection = useRef(props.selection);
-    console.log(selection);
     const [, updateState] = React.useState();
     const forceUpdate = React.useCallback(() => updateState({}), []);
     const GoSearch =  () =>{
@@ -26,10 +25,13 @@ function Selection(props){
     };
     if(selection.current===0){
         return(
-            <div>
-                <button onClick={GoSearch}>Search</button>
-                <button onClick={GoAll}>All Books</button>
-                <button onClick={GoAdd}>Add Books</button>
+            <div className="selectionHeader">
+                <h1>Choose what to do!</h1>
+                <div className="buttonSelection">
+                    <button onClick={GoSearch}>Search</button>
+                    <button onClick={GoAll}>All Books</button>
+                    <button onClick={GoAdd}>Add Books</button>
+                </div>
             </div>
         );
     }

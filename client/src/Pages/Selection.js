@@ -8,7 +8,7 @@ import './App.css';
 
 function Selection(props){
     const userID=props.login;
-    const selection = useRef(props.selection);
+    const selection = useRef(0);
     const [, updateState] = React.useState();
     const forceUpdate = React.useCallback(() => updateState({}), []);
     const GoSearch =  () =>{

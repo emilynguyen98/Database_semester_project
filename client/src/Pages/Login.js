@@ -3,6 +3,7 @@ import React from "react";
 import Axios from "axios";
 import Selection from "./Selection";
 import './App.css';
+import { useNavigate } from 'react-router-dom';
 
 function Login() {
     const [email, setEmail] =useState("");
@@ -12,6 +13,7 @@ function Login() {
     const [, updateState] = React.useState();
     const forceUpdate = React.useCallback(() => updateState({}), []);
 
+    let navigate = useNavigate();
     const findUser = async(callback) =>{
       Axios.get('http://localhost:3001/findUser', 
       {params:
@@ -62,9 +64,11 @@ function Login() {
    
     const loginProtocol = async() => {
       await findUser(loginUser);
+      navigate("/home");
     }
     const addProtocol = async() => {
       await findUser(addUser);
+      navigate("/home");
     }
     if(userID.current===0){
       return(

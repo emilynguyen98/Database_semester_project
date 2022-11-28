@@ -13,6 +13,7 @@
   align-items: center;
   justify-content: center;
   padding-top: 10%;
+  font-size: large;
 }
 
 body{
@@ -25,10 +26,12 @@ body{
   align-items: center;
   justify-content: center;
   padding-top: 10%;
+  font-size: large;
 }
 
 .Login button{
   width: 40%;
+  font-size: large;
 }
 .signupUser{
   display: flex;
@@ -37,6 +40,8 @@ body{
   align-items: center;
   margin: 5%;
   width: 25%;
+  font-size: large;
+
 }
 
 .loginUser{
@@ -46,6 +51,7 @@ body{
   align-items: center;
   margin: 5%;
   width: 25%;
+  font-size: large;
 }
 
 .buttonSelection{
@@ -53,10 +59,12 @@ body{
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  font-size: larger;
 }
 
 .buttonSelection button{
   margin:10px;
+  font-size: large;
 }
 
 .selectionHeader{
@@ -64,6 +72,7 @@ body{
   display: inline-block;
   justify-content: center;
   align-items: center;
+  font-size: larger;
 
 }
 .book p{
